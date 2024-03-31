@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2023 The LineageOS Project
+# Copyright (C) 2022-2023 The CherishOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Sweet stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit from r5x device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -44,16 +44,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="r5x" \
     PRIVATE_BUILD_DESC="unknown-user 10 QKQ1.200209.002 unknown release-keys"
 
-# RisingOs Flags
-RISING_CHIPSET := SM6125
-RISING_MAINTAINER := MAdMiZ
-WITH_GMS := false
-RISING_PACKAGE_TYPE := Vanilla
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-TARGET_HAS_UDFPS := false
-TARGET_ENABLE_BLUR := true
-RISING_PACKAGE_TYPE := Gapps
-TARGET_EXCLUDES_AUDIOFX := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+# CherishOS
+CHERISH_BUILD_TYPE=OFFICIAL
+TARGET_USES_MINI_GAPPS := true
+USE_PIXEL_CHARGING := true
+TARGET_INCLUDE_CARRIER_SETTINGS := true
