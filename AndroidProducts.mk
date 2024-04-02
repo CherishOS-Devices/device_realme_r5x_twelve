@@ -17,6 +17,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/cherish_r5x.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_r5x-user \
-    cherish_r5x-userdebug \
-    cherish_r5x-eng
+    cherish_r5x-ap1a-user \
+    cherish_r5x-ap1a-userdebug \
+    cherish_r5x-ap1a-eng
